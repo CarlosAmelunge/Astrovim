@@ -61,6 +61,25 @@ return {
     -- Grapple
     ["gt"] = { ":GrappleToggle<cr>", desc = "Tags current buffer" },
     ["gp"] = { ":GrapplePopup tags<cr>", desc = "Grapple tag popup menu" },
+    -- neogen
+    ["<leader>a"] = { desc = "󰏫 Annotate" },
+    ["<leader>a<cr>"] = { function() require("neogen").generate() end, desc = "Current" },
+    ["<leader>ac"] = { function() require("neogen").generate { type = "class" } end, desc = "Class" },
+    ["<leader>af"] = { function() require("neogen").generate { type = "func" } end, desc = "Function" },
+    ["<leader>at"] = { function() require("neogen").generate { type = "type" } end, desc = "Type" },
+    ["<leader>aF"] = { function() require("neogen").generate { type = "file" } end, desc = "File" },
+    -- telescope plugin mappings
+    ["<leader>fB"] = { "<cmd>Telescope bibtex<cr>", desc = "Find BibTeX" },
+    ["<leader>fe"] = { "<cmd>Telescope file_browser<cr>", desc = "File explorer" },
+    ["<leader>fp"] = { function() require("telescope").extensions.projects.projects {} end, desc = "Find projects" },
+    ["<leader>fT"] = { "<cmd>TodoTelescope<cr>", desc = "Find TODOs" },
+    -- octo plugin mappings
+    ["<leader>G"] = { name = " GitHub" },
+    ["<leader>Gi"] = { "<cmd>Octo issue list<cr>", desc = "Open Issues" },
+    ["<leader>GI"] = { "<cmd>Octo issue search<cr>", desc = "Search Issues" },
+    ["<leader>Gp"] = { "<cmd>Octo pr list<cr>", desc = "Open PRs" },
+    ["<leader>GP"] = { "<cmd>Octo pr search<cr>", desc = "Search PRs" },
+    ["<leader>Gr"] = { "<cmd>Octo repo list<cr>", desc = "Open Repository" },
   },
   v = {
     ["r"] = { "y:s/\\C\\<<C-R>0\\>/" },
@@ -81,4 +100,3 @@ return {
     -- ["<CR>"] = { function() return vim.fn.getcmdtype() == '/' and '<CR>zzzv' or '<CR>' end }
   },
 }
-
