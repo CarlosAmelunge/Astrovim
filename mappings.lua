@@ -20,6 +20,7 @@ return {
     ["<M-l>"] = { function() buffer.move(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
     ["<M-h>"] = { function() buffer.move(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
     ["<Tab>"] = {
+      -- prueba para ver como funciona
       function()
         if #vim.t.bufs > 1 then
           require("telescope.builtin").buffers {
