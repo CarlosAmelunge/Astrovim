@@ -9,16 +9,16 @@ return {
     ["s"] = false,
     ["Q"] = false,
     -- Movement
-    ["<M-o>"] = { "o<ESC>" },
-    ["<M-O>"] = { "O<ESC>" },
+    ["<C-o>"] = { "o<ESC>" },
+    ["<C-O>"] = { "O<ESC>" },
     ["<C-d>"] = { "<C-d>zz" },
     ["<C-u>"] = { "<C-u>zz" },
     ["n"] = { macro.better_search "n", desc = "Next search with center and unfold" },
     ["N"] = { macro.better_search "N", desc = "previous search with center and unfold" },
-    ["<S-l>"] = { function() buffer.nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
-    ["<S-h>"] = { function() buffer.nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
-    ["<M-l>"] = { function() buffer.move(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
-    ["<M-h>"] = { function() buffer.move(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
+    ["<M-l>"] = { function() buffer.nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
+    ["<M-h>"] = { function() buffer.nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
+    -- ["<tab>"] = { "<cmd>><cr>", desc = "indent" },
+    -- ["<S-tab>"] = { "<cmd><<cr>", desc = "indent" },
     ["<Tab>"] = {
       -- prueba para ver como funciona
       function()
@@ -92,8 +92,8 @@ return {
     ["<leader>r"] = { function() require("ssr").open() end, desc = "SSR" },
   },
   i = {
-    ["<M-o>"] = { "<C-o>o" },
-    ["<M-O>"] = { "<C-o>O" },
+    ["<C-o>"] = { "<C-o>o" },
+    ["<C-O>"] = { "<C-o>O" },
     ["<M-l>"] = { "<cmd>><cr>", desc = "indent" },
     ["<M-h>"] = { "<cmd><<cr>", desc = "indent" },
   },
