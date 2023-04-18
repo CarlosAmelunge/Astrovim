@@ -11,6 +11,8 @@ return {
     -- Movement
     ["<C-o>"] = { "o<ESC>" },
     ["<C-O>"] = { "O<ESC>" },
+    ["<M-j>"] = { "10j" },
+    ["<M-k>"] = { "10k" },
     ["<C-d>"] = { "<C-d>zz" },
     ["<C-u>"] = { "<C-u>zz" },
     ["n"] = { macro.better_search "n", desc = "Next search with center and unfold" },
