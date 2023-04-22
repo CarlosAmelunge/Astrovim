@@ -10,15 +10,14 @@ return {
     ["Q"] = false,
     -- Movement
     ["<C-o>"] = { "o<ESC>" },
-    ["<C-O>"] = { "O<ESC>" },
     ["<M-j>"] = { "10j" },
     ["<M-k>"] = { "10k" },
     ["<C-d>"] = { "<C-d>zz" },
     ["<C-u>"] = { "<C-u>zz" },
     ["n"] = { macro.better_search "n", desc = "Next search with center and unfold" },
     ["N"] = { macro.better_search "N", desc = "previous search with center and unfold" },
-    ["<M-l>"] = { function() buffer.nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
-    ["<M-h>"] = { function() buffer.nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
+    ["<leader>bn"] = { function() buffer.nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
+    ["<leader>bb"] = { function() buffer.nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
     -- ["<tab>"] = { "<cmd>><cr>", desc = "indent" },
     -- ["<S-tab>"] = { "<cmd><<cr>", desc = "indent" },
     ["<Tab>"] = {
@@ -95,7 +94,6 @@ return {
   },
   i = {
     ["<C-o>"] = { "<C-o>o" },
-    ["<C-O>"] = { "<C-o>O" },
     ["<M-l>"] = { "<cmd>><cr>", desc = "indent" },
     ["<M-h>"] = { "<cmd><<cr>", desc = "indent" },
   },
