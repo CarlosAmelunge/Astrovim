@@ -72,8 +72,8 @@ return {
         content_layout = "center",
         tab_labels = {
           filesystem = get_icon "FolderClosed" .. " File",
-          buffers = get_icon "DefaultFile" .. " Bufs",
-          git_status = get_icon "Git" .. " Git",
+          -- buffers = get_icon "DefaultFile" .. " Bufs",
+          -- git_status = get_icon "Git" .. " Git",
           diagnostics = get_icon "Diagnostic" .. " Diagnostic",
         },
       },
@@ -117,6 +117,17 @@ return {
         follow_current_file = true,
         hijack_netrw_behavior = "open_current",
         use_libuv_file_watcher = true,
+        filtered_items = {
+          visible = true,
+          show_hidden_count = true,
+          hide_dotfiles = false,
+          hide_gitignored = true,
+          hide_by_name = {
+            ".git",
+            ".DS_Store",
+            "thumbs.db",
+          },
+        },
         commands = global_commands,
       },
       buffers = { commands = global_commands },
