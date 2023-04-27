@@ -4,6 +4,19 @@ local astro_utils = require "astronvim.utils"
 
 return {
   n = {
+    ["<C-m>"] = { ":lua require('harpoon.mark').add_file()<cr>", desc = "Mark file" },
+    ["<C-t>"] = { ":lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "Toggle UI" },
+    ["<C-1>"] = { ":lua require('harpoon.ui').nav_file(1)<cr>", desc = "Goto mark 1" },
+    ["<C-2>"] = { ":lua require('harpoon.ui').nav_file(2)<cr>", desc = "Goto mark 2" },
+    ["<C-3>"] = { ":lua require('harpoon.ui').nav_file(3)<cr>", desc = "Goto mark 3" },
+    ["<C-4>"] = { ":lua require('harpoon.ui').nav_file(4)<cr>", desc = "Goto mark 4" },
+    ["<C-5>"] = { ":lua require('harpoon.ui').nav_file(5)<cr>", desc = "Goto mark 5" },
+    ["<C-6>"] = { ":lua require('harpoon.ui').nav_file(6)<cr>", desc = "Goto mark 6" },
+    ["<C-7>"] = { ":lua require('harpoon.ui').nav_file(7)<cr>", desc = "Goto mark 7" },
+    ["<C-8>"] = { ":lua require('harpoon.ui').nav_file(8)<cr>", desc = "Goto mark 8" },
+    ["<C-9>"] = { ":lua require('harpoon.ui').nav_file(9)<cr>", desc = "Goto mark 9" },
+    ["<C-n>"] = { ":lua require('harpoon.ui').nav_next()<cr>", desc = "Next file" },
+    ["<C-b>"] = { ":lua require('harpoon.ui').nav_prev()<cr>", desc = "Prev file" },
     -- Disable keymaps
     ["gh"] = false,
     ["s"] = false,
@@ -16,8 +29,8 @@ return {
     ["<C-u>"] = { "<C-u>zz" },
     ["n"] = { macro.better_search "n", desc = "Next search with center and unfold" },
     ["N"] = { macro.better_search "N", desc = "previous search with center and unfold" },
-    ["<leader>bn"] = { function() buffer.nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
-    ["<leader>bb"] = { function() buffer.nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
+    ["<S-l>"] = { function() buffer.nav(vim.v.count > 0 and vim.v.count or 1) end, desc = "Next buffer" },
+    ["<S-h>"] = { function() buffer.nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc = "Previous buffer" },
     -- ["<tab>"] = { "<cmd>><cr>", desc = "indent" },
     -- ["<S-tab>"] = { "<cmd><<cr>", desc = "indent" },
     ["<Tab>"] = {
@@ -72,7 +85,7 @@ return {
     ["<leader>aF"] = { function() require("neogen").generate { type = "file" } end, desc = "File" },
     -- telescope plugin mappings
     ["<leader>fB"] = { "<cmd>Telescope bibtex<cr>", desc = "Find BibTeX" },
-    ["<leader>fe"] = { "<cmd>Telescope file_browser<cr>", desc = "File explorer" },
+    ["<leader>fe"] = { "<cmd>Telescope file_browser<CR>", desc = "File explorer" },
     ["<leader>fp"] = { function() require("telescope").extensions.projects.projects {} end, desc = "Find projects" },
     ["<leader>fT"] = { "<cmd>TodoTelescope<cr>", desc = "Find TODOs" },
     -- octo plugin mappings

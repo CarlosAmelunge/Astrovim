@@ -68,9 +68,9 @@ return {
       auto_clean_after_session_restore = true,
       close_if_last_window = true,
       source_selector = {
-        winbar = true,
+        winbar = false,
         content_layout = "center",
-        tab_labels = {
+        source = {
           filesystem = get_icon "FolderClosed" .. " File",
           -- buffers = get_icon "DefaultFile" .. " Bufs",
           -- git_status = get_icon "Git" .. " Git",
