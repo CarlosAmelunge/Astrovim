@@ -34,16 +34,6 @@ return {
       end,
       desc = "Switch Buffers",
     },
-    -- Rename
-    ["yrw"] = { "yiw:s/\\C\\<<C-R>0\\>/" },
-    ["yrW"] = { "yiW:s/\\C\\<<C-R>0\\>/" },
-    ["yre"] = { "yie:s/\\C\\<<C-R>0\\>/" },
-    ["yrE"] = { "yiE:s/\\C\\<<C-R>0\\>/" },
-    ["<F2>"] = { "y:%s/<C-R>0/" },
-    ["<F2><F2>"] = { "y:%s/<C-R>0/" },
-    ["<F3>"] = { "<cmd>lua require('spectre').open()<cr>" },
-    ["<F3><F3>"] = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>" },
-    ["<leader>r"] = { function() require("ssr").open() end, desc = "SSR" },
     -- Telescope
     ["<C-p>"] = { "<cmd>Telescope fd<CR>", desc = "Activates Telescope fd" },
     ["<C-S-p>"] = { "<cmd>Telescope commands<CR>", desc = "Activates Telescope commands" },
@@ -51,15 +41,6 @@ return {
     -- ["<C-b>"] = { "<cmd>Telescope file_browser<CR>" },
     -- ["<C-z>"] = { "<cmd>Telescope undo<CR>" },
 
-    --
-    ["<leader>n"] = { "<cmd>ZenMode<CR>", desc = "Centers and mutes code" },
-    ["<leader>u1"] = { "<cmd>AerialToggle<CR>", desc = "Toggle Aerial" },
-    ["<leader>u2"] = { "<cmd>TroubleToggle<CR>", desc = "Toggle Trouble" },
-    ["<leader>u3"] = { "<cmd>TagbarToggle<CR>", desc = "Toggle Tagbar" },
-    ["sj"] = { "<cmd>TSJToggle<CR>", desc = "Treesj toggle" },
-    -- Others
-    ["<F12>"] = { "<cmd>CellularAutomaton make_it_rain<CR>", desc = "Toggle Tagbar" },
-    ["<leader>uD"] = { ":lua require('lsp-inlayhints').toggle()<cr>", desc = "Toggle inlay hints" },
     -- Grapple
     ["gt"] = { ":GrappleToggle<cr>", desc = "Tags current buffer" },
     ["gp"] = { ":GrapplePopup tags<cr>", desc = "Grapple tag popup menu" },
