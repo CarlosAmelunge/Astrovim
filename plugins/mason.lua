@@ -10,7 +10,6 @@ return {
         "html",
         "intelephense",
         "marksman",
-        "neocmake",
         "jsonls",
         -- "julials",
         "pyright",

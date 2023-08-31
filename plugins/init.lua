@@ -33,13 +33,13 @@ return {
     },
   },
 
-  {
-    "zbirenbaum/neodim",
-    event = "User AstroFile",
-    opts = {
-      alpha = 0.75,
-    },
-  },
+  -- {
+  --   "zbirenbaum/neodim",
+  --   event = "User AstroFile",
+  --   opts = {
+  --     alpha = 0.75,
+  --   },
+  -- },
 
   {
     "folke/todo-comments.nvim",
